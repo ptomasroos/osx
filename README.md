@@ -23,6 +23,16 @@ chsh -s /bin/zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 ```
 
+## config osx
+```
+defaults write com.developer.application NSQuitAlwaysKeepsWindows -bool false
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+defaults write com.apple.finder AppleShowAllFiles TRUE
+defaults write com.apple.Finder QuitMenuItem -bool YES
+killall Finder
+sudo find / -name '*.DS_Store' -type f -delete
+```
+
 #install gui applications
 
 ```
