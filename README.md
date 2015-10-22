@@ -6,7 +6,7 @@ This is the installation guide how to install OSX according to my regular setup 
 
 sudo softwareupdate -iva
 
-## install brew
+## install brew and some packages
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -14,6 +14,8 @@ brew install caskroom/cask/brew-cask
 brew install git
 brew install node
 brew install watchman
+brew install zsh zsh-completions
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 ```
 
 ## manual 
