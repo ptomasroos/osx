@@ -16,7 +16,6 @@ xcode
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install caskroom/cask/brew-cask
-brew install git
 brew install node
 brew install watchman
 brew install zsh zsh-completions
