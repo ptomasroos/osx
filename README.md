@@ -6,6 +6,11 @@ This is the installation guide how to install OSX according to my regular setup 
 
 sudo softwareupdate -iva
 
+## manual 
+```
+xcode
+```
+
 ## install brew and some packages
 
 ```
@@ -17,13 +22,6 @@ brew install watchman
 brew install zsh zsh-completions
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 ```
-
-## manual 
-```
-bettersnaptool
-xcode
-```
-
 
 #install gui applications
 
