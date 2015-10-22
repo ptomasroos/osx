@@ -18,6 +18,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install caskroom/cask/brew-cask
 brew install node
 brew install watchman
+brew install flow
+brew install android-sdk android-ndk
 brew install zsh zsh-completions
 chsh -s /bin/zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
@@ -31,6 +33,11 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 defaults write com.apple.Finder QuitMenuItem -bool YES
 killall Finder
 sudo find / -name '*.DS_Store' -type f -delete
+```
+
+# npm's
+```
+npm install -g react-native-cli
 ```
 
 #install gui applications
