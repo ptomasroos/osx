@@ -35,9 +35,10 @@ killall Finder
 sudo find / -name '*.DS_Store' -type f -delete
 ```
 
-# npm's
+## npm's
 ```
 npm install -g react-native-cli
+npm install -g http-server
 ```
 
 #install gui applications
