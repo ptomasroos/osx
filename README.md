@@ -39,8 +39,8 @@ brew cask install screenhero
 brew cask install firefox
 brew cask install telegram
 brew cask install sketch
-brew cask install genymotion
 brew cask install virtualbox
+brew cask install genymotion
 brew cask install java
 brew cask install android-studio
 brew cask install microsoft-office365
