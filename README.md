@@ -40,9 +40,8 @@ brew cask install firefox
 brew cask install telegram
 brew cask install sketch
 brew cask install genymotion
-brew cask install virtualbox
 brew cask install android-studio
-brew cask install microsoft-office
+brew cask install microsoft-office365
 brew cask install google-drive
 brew cask install focus
 brew cask install atom
