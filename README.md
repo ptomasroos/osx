@@ -20,6 +20,7 @@ brew install node
 brew install watchman
 brew install flow
 brew install android-sdk android-ndk
+echo "export ANDROID_HOME=/usr/local/opt/android-sdk" >> ~/.zshrc
 brew install zsh zsh-completions
 chsh -s /bin/zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
@@ -60,7 +61,7 @@ brew cask install sketch
 brew cask install virtualbox
 brew cask install genymotion
 brew cask install java
-brew cask install android-studio
+brew cask install android-studio # remember to config on setup with sdk path /usr/local/opt/android-sdk
 brew cask install microsoft-office365
 brew cask install google-drive
 brew cask install focus
