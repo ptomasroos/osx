@@ -20,10 +20,10 @@ brew install node
 brew install watchman
 brew install flow
 brew install android-sdk android-ndk
-echo "export ANDROID_HOME=/usr/local/opt/android-sdk" >> ~/.zshrc
 brew install zsh zsh-completions
 chsh -s /bin/zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+echo "export ANDROID_HOME=/usr/local/opt/android-sdk" >> ~/.zshrc
 ```
 
 ## config osx
