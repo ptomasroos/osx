@@ -122,3 +122,7 @@ brew cask install dashlane
 brew cask install teamviewer
 ```
 
+```
+sudo gem install cocoapods
+```
+
