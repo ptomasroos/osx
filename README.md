@@ -27,6 +27,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "export ANDROID_HOME=/usr/local/opt/android-sdk" >> ~/.zshrc
 ```
 
+## git config
+```
+git config --global push.default simple
+git config --global pull.rebase true
+```
+
 ## config osx
 ```
 defaults write com.developer.application NSQuitAlwaysKeepsWindows -bool false
