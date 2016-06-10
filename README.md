@@ -128,3 +128,7 @@ brew cask install adobe-reader
 sudo gem install cocoapods
 ```
 
+## apm's
+```
+apm install nuclide
+```
