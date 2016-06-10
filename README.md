@@ -15,14 +15,15 @@ xcode
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install caskroom/cask/brew-cask
 brew install node
 brew install watchman
 brew install flow
+brew tap caskroom/cask
+brew cask install java
 brew install android-sdk android-ndk
 brew install zsh zsh-completions
 chsh -s /bin/zsh
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo "export ANDROID_HOME=/usr/local/opt/android-sdk" >> ~/.zshrc
 ```
 
