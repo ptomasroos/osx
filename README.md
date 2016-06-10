@@ -131,4 +131,5 @@ sudo gem install cocoapods
 ## apm's
 ```
 apm install nuclide
+apm install linter-eslint
 ```
