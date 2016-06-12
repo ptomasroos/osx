@@ -128,6 +128,7 @@ brew cask install atom
 brew cask install dashlane
 brew cask install teamviewer
 brew cask install adobe-reader
+brew cask install goofy
 ```
 
 ```
