@@ -25,6 +25,7 @@ brew install zsh zsh-completions
 chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo "export ANDROID_HOME=/usr/local/opt/android-sdk" >> ~/.zshrc
+echo "export ANDROID_NDK=/usr/local/opt/android-ndk" >> ~/.zshrc
 ```
 
 ## git config
