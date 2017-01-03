@@ -113,7 +113,6 @@ brew cask install google-chrome
 brew cask install vlc
 brew cask install evernote
 brew cask install slack
-brew cask install bitcoin-core
 brew cask install dropbox
 brew cask install screenhero
 brew cask install firefox
