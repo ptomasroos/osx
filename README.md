@@ -18,6 +18,7 @@ xcode
 brew install node
 brew install watchman
 brew install flow
+brew install ruby
 brew tap caskroom/cask
 brew cask install java
 brew install android-sdk android-ndk
