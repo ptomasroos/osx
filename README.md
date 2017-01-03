@@ -14,7 +14,7 @@ xcode
 ## install brew and some packages
 
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install node
 brew install watchman
 brew install flow
