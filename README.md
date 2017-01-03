@@ -37,6 +37,7 @@ git config --global pull.rebase true
 ## config osx
 ```
 defaults write com.developer.application NSQuitAlwaysKeepsWindows -bool false
+defaults write com.apple.screencapture location ~/Screenshots/
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 defaults write com.apple.finder AppleShowAllFiles TRUE
 defaults write AppleShowAllExtensions -bool true
