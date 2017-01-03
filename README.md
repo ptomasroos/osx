@@ -120,7 +120,6 @@ brew cask install firefox
 brew cask install telegram
 brew cask install sketch
 brew cask install genymotion # remember to configure to use the SDK at /usr/local/opt/android-sdk
-brew cask install java
 brew cask install android-studio # remember to config on setup with sdk path /usr/local/opt/android-sdk
 brew cask install microsoft-office
 brew cask install google-drive
