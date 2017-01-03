@@ -121,7 +121,7 @@ brew cask install telegram
 brew cask install sketch
 brew cask install genymotion # remember to configure to use the SDK at /usr/local/opt/android-sdk
 brew cask install android-studio # remember to config on setup with sdk path /usr/local/opt/android-sdk
-brew cask install microsoft-office
+brew cask install rescuetime
 brew cask install google-drive
 brew cask install focus
 brew cask install atom
