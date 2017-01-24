@@ -135,7 +135,7 @@ brew cask install goofy
 ```
 
 ```
-sudo gem install cocoapods
+gem install cocoapods --user-install
 xcode-select --install
 sudo gem install fastlane -NV
 ```
