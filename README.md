@@ -4,7 +4,7 @@ This is the installation guide how to install OSX according to my regular setup 
 
 ## update
 
-sudo softwareupdate -iva
+sudo softwareupdate -ia --verbose
 
 ## manual 
 ```
