@@ -95,7 +95,10 @@ sudo mdutil -E / > /dev/null
 #use UTF8 in terminal
 defaults write com.apple.terminal StringEncodings -array 4
 
+#use another screen shot location to now pollute desktop
+defaults write com.apple.screencapture location /Users/tomas/Documents/Screenshots
 
+killall SystemUIServer
 killall Finder
 sudo find / -name '*.DS_Store' -type f -delete
 ```
