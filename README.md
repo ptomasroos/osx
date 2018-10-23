@@ -22,6 +22,25 @@ brew install watchman
 brew install flow
 brew install ruby
 brew install autojump
+brew install htop
+brew install postman
+brew install node
+brew install wget
+brew install yarn
+brew install python
+brew install nmap
+brew install go
+brew install tig
+brew install hg bzr
+brew install git
+brew install vscode
+brew install mysqlworkbench
+brew install imageoptim
+brew tap crisidev/homebrew-chunkwm
+brew install --HEAD --with-tmp-logging chunkwm
+brew install --HEAD --with-logging koekeishiya/formulae/skhd
+brew services start chunkwm
+brew services start koekeishiya/formulae/skhd
 brew tap caskroom/cask
 brew cask install java
 brew install android-sdk android-ndk
