@@ -112,7 +112,7 @@ npm install -g react-native-cli
 npm install -g http-server
 ```
 
-#install gui applications
+## install gui applications
 
 ```
 brew cask install vmware-fusion
