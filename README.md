@@ -56,6 +56,8 @@ echo "alias xcode="open -a Xcode" >> ~/.zshrc
 ```
 git config --global push.default simple
 git config --global pull.rebase true
+git config --global user.email "ptomasroos@gmail.com"
+git config --global user.name "Tomas Roos"
 ```
 
 ## config osx
