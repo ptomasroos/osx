@@ -9,16 +9,19 @@ sudo softwareupdate -ia --verbose
 ## manual 
 ```
 xcode
+docker
 ```
 
 ## install brew and some packages
 
 ```
+xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install node
 brew install watchman
 brew install flow
 brew install ruby
+brew install autojump
 brew tap caskroom/cask
 brew cask install java
 brew install android-sdk android-ndk
