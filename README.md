@@ -10,12 +10,12 @@ sudo softwareupdate -ia --verbose
 ```
 xcode
 docker
+xcode-select --install
 ```
 
 ## install brew and some packages
 
 ```
-xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install node
 brew install watchman
@@ -139,10 +139,6 @@ npm install -g http-server
 brew cask install vmware-fusion skype spotify google-chrome vlc slack dropbox firefox telegram sketch focus atom dashlane goofy android-studio
 # remember to config on setup with sdk path /usr/local/opt/android-sdk on android-studio
 echo "alias studio="open -a /Applications/Android\ Studio.app" >> ~/.zshrc # open android studio projects with "studio /directory"
-```
-
-```
-xcode-select --install
 ```
 
 ## apm's
