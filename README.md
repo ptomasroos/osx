@@ -136,7 +136,7 @@ npm install -g http-server
 ## install gui applications
 
 ```
-brew cask install vmware-fusion skype spotify google-chrome vlc slack dropbox firefox telegram sketch focus atom dashlane goofy android-studio
+brew cask install vmware-fusion skype spotify google-chrome vlc slack dropbox firefox telegram sketch focus atom dashlane goofy android-studio spectrum signal discord
 # remember to config on setup with sdk path /usr/local/opt/android-sdk on android-studio
 echo "alias studio="open -a /Applications/Android\ Studio.app" >> ~/.zshrc # open android studio projects with "studio /directory"
 ```
