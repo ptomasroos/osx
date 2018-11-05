@@ -136,39 +136,16 @@ npm install -g http-server
 ## install gui applications
 
 ```
-brew cask install vmware-fusion
-brew cask install skype
-brew cask install spotify
-brew cask install google-chrome
-brew cask install vlc
-brew cask install evernote
-brew cask install slack
-brew cask install dropbox
-brew cask install screenhero
-brew cask install firefox
-brew cask install telegram
-brew cask install sketch
-brew cask install genymotion # remember to configure to use the SDK at /usr/local/opt/android-sdk
-brew cask install android-studio # remember to config on setup with sdk path /usr/local/opt/android-sdk
+brew cask install vmware-fusion skype spotify google-chrome vlc slack dropbox firefox telegram sketch focus atom dashlane goofy android-studio
+# remember to config on setup with sdk path /usr/local/opt/android-sdk on android-studio
 echo "alias studio="open -a /Applications/Android\ Studio.app" >> ~/.zshrc # open android studio projects with "studio /directory"
-brew cask install rescuetime
-brew cask install google-drive
-brew cask install focus
-brew cask install atom
-brew cask install dashlane
-brew cask install teamviewer
-brew cask install adobe-reader
-brew cask install goofy
 ```
 
 ```
-gem install cocoapods --user-install
 xcode-select --install
-sudo gem install fastlane -NV
 ```
 
 ## apm's
 ```
 apm install nuclide
-apm install linter-eslint
 ```
