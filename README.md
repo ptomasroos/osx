@@ -29,10 +29,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```
 brew install nvm watchman autojump htop wget nmap yarn tig hg bzr git
 mkdir ~/.nvm
-nvm install node
-nvm use node
 echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.zshrc
 echo ". \"$(brew --prefix nvm)/nvm.sh\"" >> ~/.zshrc
+source ~/.zshrc
+nvm install node
+nvm use node
 echo "export ANDROID_HOME=/usr/local/opt/android-sdk" >> ~/.zshrc
 echo "export ANDROID_NDK=/usr/local/opt/android-ndk" >> ~/.zshrc
 echo "alias xcode=\"open -a Xcode\"" >> ~/.zshrc
