@@ -12,7 +12,7 @@ xcode
 xcode-select --install
 ```
 
-## install brew and some packages
+## install brew
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -22,6 +22,7 @@ xcode-select --install
 brew install zsh zsh-completion
 chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+export GOPATH=$HOME/go
 ```
 
 ## continue with more brew packages
@@ -32,6 +33,7 @@ echo "export ANDROID_HOME=/usr/local/opt/android-sdk" >> ~/.zshrc
 echo "export ANDROID_NDK=/usr/local/opt/android-ndk" >> ~/.zshrc
 echo "alias xcode="open -a Xcode" >> ~/.zshrc
 echo "alias studio="open -a /Applications/Android\ Studio.app" >> ~/.zshrc
+echo "export GOPATH=$HOME/dev" >> ~/.zshrc
 ```
 
 ## i3wm-look-alike on mac
@@ -50,7 +52,7 @@ brew install applesimutils
 
 ## brew casks
 ```
-brew cask install atom java docker android-sdk homebrew/cask-versions/java8 android-ndk visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord
+brew cask install atom java docker android-sdk homebrew/cask-versions/java8 android-ndk visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
 ```
 
 ## git config
