@@ -27,11 +27,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ## continue with more brew packages
 
 ```
-brew install node watchman autojump htop wget nmap yarn tig hg bzr git
+brew install nvm watchman autojump htop wget nmap yarn tig hg bzr git
+mkdir ~/.nvm
+nvm install node
+nvm use node
+echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.zshrc
+echo ". \"$(brew --prefix nvm)/nvm.sh\"" >> ~/.zshrc
 echo "export ANDROID_HOME=/usr/local/opt/android-sdk" >> ~/.zshrc
 echo "export ANDROID_NDK=/usr/local/opt/android-ndk" >> ~/.zshrc
-echo "alias xcode="open -a Xcode" >> ~/.zshrc
-echo "alias studio="open -a /Applications/Android\ Studio.app" >> ~/.zshrc
+echo "alias xcode=\"open -a Xcode\"" >> ~/.zshrc
+echo "alias studio=\"open -a /Applications/Android\ Studio.app\"" >> ~/.zshrc
 echo "export GOPATH=$HOME/dev" >> ~/.zshrc
 ```
 
