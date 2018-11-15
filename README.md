@@ -43,10 +43,15 @@ brew services start chunkwm
 brew services start koekeishiya/formulae/skhd
 ```
 
+```
+brew tap wix/brew
+brew install applesimutils
+```
+
 ## brew casks
 ```
 brew cask install atom java docker android-sdk homebrew/cask-versions/java8 android-ndk visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord
-
+```
 
 ## git config
 ```
@@ -83,6 +88,7 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 ## npm's
 ```
 npm install -g react-native-cli
+npm install -g detox-cli
 ```
 
 ## install gui applications
