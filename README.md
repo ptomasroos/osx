@@ -22,7 +22,6 @@ xcode-select --install
 brew install zsh zsh-completion
 chsh -s /bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-export GOPATH=$HOME/go
 ```
 
 ## continue with more brew packages
@@ -52,7 +51,7 @@ brew install applesimutils
 
 ## brew casks
 ```
-brew cask install atom java docker android-sdk homebrew/cask-versions/java8 android-ndk visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
+brew cask install dashlane atom java docker android-sdk homebrew/cask-versions/java8 android-ndk visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
 ```
 
 ## git config
