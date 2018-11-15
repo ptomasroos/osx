@@ -61,11 +61,16 @@ brew install applesimutils
 
 ## brew casks
 ```
-brew cask install dashlane atom java docker android-sdk homebrew/cask-versions/java8 android-ndk visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
+brew cask install homebrew/cask-versions/java8
+brew cask install dashlane vmware-fusion atom docker android-sdk android-ndk visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
+echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'" >> ~/.zshrc
+echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'" >> ~/.zshrc
+source ~/.zshrc
 ```
 
 ## git config
 ```
+mkdir -p ~/.ssh
 git config --global push.default simple
 git config --global pull.rebase true
 git config --global user.email "ptomasroos@gmail.com"
@@ -100,13 +105,6 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 ```
 npm install -g react-native-cli
 npm install -g detox-cli
-```
-
-## install gui applications
-
-```
-brew cask install vmware-fusion skype spotify google-chrome vlc slack dropbox firefox telegram sketch focus atom dashlane goofy android-studio spectrum signal discord
-# remember to config on setup with sdk path /usr/local/opt/android-sdk on android-studio
 ```
 
 ## apm's
