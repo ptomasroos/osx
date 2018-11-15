@@ -38,7 +38,9 @@ echo "export ANDROID_HOME=/usr/local/opt/android-sdk" >> ~/.zshrc
 echo "export ANDROID_NDK=/usr/local/opt/android-ndk" >> ~/.zshrc
 echo "alias xcode=\"open -a Xcode\"" >> ~/.zshrc
 echo "alias studio=\"open -a /Applications/Android\ Studio.app\"" >> ~/.zshrc
-echo "export GOPATH=$HOME/dev" >> ~/.zshrc
+echo "export GOPATH=$HOME/go" >> ~/.zshrc
+source ~/.zshrc
+mkdir -p $GOPATH
 ```
 
 ## i3wm-look-alike on mac
