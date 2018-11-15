@@ -27,7 +27,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ## continue with more brew packages
 
 ```
-brew install nvm watchman autojump htop wget nmap yarn tig hg bzr git goenv
+brew install nvm watchman autojump htop wget nmap yarn tig hg bzr git goenv tree
 echo "eval \"$(goenv init -)\"" >> ~/.zshrc
 source ~/.zshrc
 mkdir ~/.nvm
