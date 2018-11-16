@@ -6,8 +6,9 @@ This is the installation guide how to install OSX according to my regular setup 
 
 sudo softwareupdate -ia --verbose
 
-## manual 
+## manual from appstore
 ```
+dashlane
 xcode
 xcode-select --install
 ```
@@ -62,7 +63,7 @@ brew install applesimutils
 ## brew casks
 ```
 brew cask install homebrew/cask-versions/java8
-brew cask install dashlane vmware-fusion atom docker android-sdk android-ndk visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
+brew cask install ngrok vmware-fusion atom docker android-sdk android-ndk visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
 echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'" >> ~/.zshrc
 echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'" >> ~/.zshrc
 source ~/.zshrc
