@@ -80,7 +80,112 @@ git config --global user.name "Tomas Roos"
 
 ## config osx
 ```
-defaults write com.apple.mouse.tapBehavior -int 1
+# trackpad: enable tap to click
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# automatically illuminate built-in keyboard in low light
+defaults write com.apple.BezelServices kDim -bool true
+# but go dark after 5mins of inactivity
+defaults write com.apple.BezelServices kDimTime -int 300
+
+# show hidden files
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# show all file extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# enable text selection in QuickLook
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
+# when searching, search the current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# disable file extension warning
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# enable spring loading for directories, remove the delay
+defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+defaults write NSGlobalDomain com.apple.springing.delay -float 0
+
+# don't create .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# arrange by kind
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy kind" ~/Library/Preferences/com.apple.finder.plist
+
+# set grid spacing
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 54" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:gridSpacing 54" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 30" ~/Library/Preferences/com.apple.finder.plist
+
+# use icon view by default
+defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
+
+# don't open 'safe' files by default
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+# set Safari's page search to 'contains' not 'starts with'
+defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
+
+# enable Develop menu and Web Inspector
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+# show web inspector in all other web views
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+#
+# Mail
+#
+
+# copy emails as 'foo@example.com', not 'Foo Bar <foo@example.com'
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+#
+# Terminal
+#
+
+# only use uft-8 in Terminal.app
+defaults write com.apple.terminal StringEncodings -array 4
+
+
+# disable spotlight indexing on Volumes
+sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+
+# expanding the save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# save to disk, rather than iCloud, by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# disable Photos.app from starting everytime a device is plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+# disable system-wide resume
+defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 defaults write com.apple.finder AppleShowAllFiles TRUE
 defaults write com.apple.finder QuitMenuItem -bool true
@@ -94,12 +199,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 defaults write com.apple.Safari HomePage -string "about:blank"
 defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 defaults write com.apple.Safari ShowFavoritesBar -bool false
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-defaults write com.apple.mail DisableReplyAnimations -bool true
-defaults write com.apple.mail DisableSendAnimations -bool true
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 ```
 
 ## npm's
