@@ -93,6 +93,15 @@ defaults write com.apple.BezelServices kDimTime -int 300
 # show hidden files
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
+# display full POSIX path as Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+
+defaults write com.apple.finder QuitMenuItem -bool true
+defaults write com.apple.Finder QuitMenuItem -bool YES
+  
+# show dotfiles in Finder by default
+defaults write com.apple.finder AppleShowAllFiles TRUE
+
 # show all file extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
@@ -110,6 +119,14 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 # disable file extension warning
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# wipe all (default) app icons from the Dock
+defaults write com.apple.dock persistent-apps -array
+
+# set Dock to auto-hide and remove the auto-hiding delay
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
 
 # enable spring loading for directories, remove the delay
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
@@ -137,6 +154,18 @@ defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 # set Safari's page search to 'contains' not 'starts with'
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
+# safari's homepage to bogus
+defaults write com.apple.Safari HomePage -string "about:blank"
+
+# disabling Safari's thumbnail cache for History and Top Sites"
+defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
+
+# disable the default top sites in new tabs
+defaults write com.apple.Safari ShowSidebarInTopSites -bool false
+
+# remove the top sticky favorites bar
+defaults write com.apple.Safari ShowFavoritesBar -bool false
+
 # enable Develop menu and Web Inspector
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
@@ -144,6 +173,19 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 
 # show web inspector in all other web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# set screenshots dir to avoid polluting the desktop
+mkdir -p "${HOME}/Screenshots""
+defaults write com.apple.screencapture location -string "${HOME}/Screenshots"
+
+# set default format for screenshots
+defaults write com.apple.screencapture type -string "png"
+
+# enabling subpixel font rendering on non-Apple LCDs
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+# enabling HiDPI display modes (requires restart)"
+sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 #
 # Mail
@@ -158,7 +200,6 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # only use uft-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
-
 
 # disable spotlight indexing on Volumes
 sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
@@ -186,19 +227,15 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # disable system-wide resume
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
-defaults write com.apple.finder AppleShowAllFiles TRUE
-defaults write com.apple.finder QuitMenuItem -bool true
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-defaults write com.apple.Finder QuitMenuItem -bool YES
-defaults write AppleShowAllExtensions -bool true
+# setting a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 0
+
+# set bluetooth trackpad to tap
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults write NSAutomaticSpellingCorrectionEnabled -bool false
+
+# requiring password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
-defaults write com.apple.Safari HomePage -string "about:blank"
-defaults write com.apple.Safari ShowSidebarInTopSites -bool false
-defaults write com.apple.Safari ShowFavoritesBar -bool false
 ```
 
 ## npm's
