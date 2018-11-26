@@ -171,6 +171,12 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
+# disable AutoFill in safari
+defaults write com.apple.Safari AutoFillFromAddressBook -bool false
+defaults write com.apple.Safari AutoFillPasswords -bool false
+defaults write com.apple.Safari AutoFillCreditCardData -bool false
+defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
+
 # using the system-native print preview dialog in Chrome
 defaults write com.google.Chrome DisablePrintPreview -bool true
 defaults write com.google.Chrome.canary DisablePrintPreview -bool true
@@ -194,16 +200,15 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # enabling HiDPI display modes (requires restart)"
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
-#
-# Mail
-#
-
 # copy emails as 'foo@example.com', not 'Foo Bar <foo@example.com'
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
-#
-# Terminal
-#
+# disable send and reply animations in Mail.app
+defaults write com.apple.mail DisableReplyAnimations -bool true
+defaults write com.apple.mail DisableSendAnimations -bool true
+
+# disable inline attachments (just show the icons)
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # only use uft-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
@@ -246,6 +251,9 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # disable local Time Machine backups
 hash tmutil &> /dev/null && sudo tmutil disablelocal
+
+# don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
 
 ```
 
