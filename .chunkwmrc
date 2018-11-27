@@ -15,7 +15,7 @@ chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
 
 chunkc core::hotload 1
 chunkc core::unload tiling.so
-chunkc core::unload border.so
+#chunkc core::unload border.so
 
 #
 # NOTE: the following are config variables for the chunkwm-tiling plugin.
@@ -61,5 +61,5 @@ chunkc set focused_border_skip_floating  1
 
 # plugins to load
 
-chunkc core::load border.so
+#chunkc core::load border.so
 chunkc core::load tiling.so
