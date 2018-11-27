@@ -226,9 +226,6 @@ defaults write com.apple.screencapture type -string "png"
 # enabling subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# enabling HiDPI display modes (requires restart)"
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
-
 # copy emails as 'foo@example.com', not 'Foo Bar <foo@example.com'
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
@@ -241,9 +238,6 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # only use uft-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
-
-# disable spotlight indexing on Volumes
-sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 
 # expanding the save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -279,7 +273,7 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
+sudo tmutil disable
 
 # don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
