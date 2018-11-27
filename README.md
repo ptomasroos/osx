@@ -51,8 +51,10 @@ mkdir -p $GOPATH
 brew tap crisidev/homebrew-chunkwm
 brew install --HEAD --with-tmp-logging chunkwm
 brew install --HEAD --with-logging koekeishiya/formulae/skhd
-brew services start chunkwm
+brew services start crisidev/chunkwm/chunkwm
 brew services start koekeishiya/formulae/skhd
+wget https://raw.githubusercontent.com/ptomasroos/osx/master/.skhdrc ~/.skhdrc
+wget https://raw.githubusercontent.com/ptomasroos/osx/master/.chunkwmrc ~/.chunkwmrc
 ```
 
 ```
