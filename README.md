@@ -55,6 +55,7 @@ brew services start crisidev/chunkwm/chunkwm
 brew services start koekeishiya/formulae/skhd
 wget https://raw.githubusercontent.com/ptomasroos/osx/master/.skhdrc ~/.skhdrc
 wget https://raw.githubusercontent.com/ptomasroos/osx/master/.chunkwmrc ~/.chunkwmrc
+chmod +x ~/.chunkwmrc
 brew services restart crisidev/chunkwm/chunkwm
 brew services restart koekeishiya/formulae/skhd
 ```
@@ -259,9 +260,6 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # disable system-wide resume
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
-
-# setting a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
 
 # set bluetooth trackpad to tap
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
