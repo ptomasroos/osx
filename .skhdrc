@@ -1,11 +1,12 @@
 :: default    : chunkc border::color 0xFF6699CC
 :: resize @   : chunkc border::color 0xFFFAC863
 
-# enter fullscreen mode for the focused container
-ctrl - f : chunkc tiling::window --toggle fullscreen
+# enter fullscreen mode for the focused container, only works in bsp mode
+ctrl - f : chunkc tiling::window --toggle fullscreen;ctrl + shift - space : chunkc tiling::window --toggle float;
 
-# change focused window to float
-ctrl + shift - space : chunkc tiling::window --toggle float
+
+# maximize the floated focused window
+ctrl + shift - m     : chunkc tiling::window --grid-layout 1:1:0:0:1:1
 
 # change desktop's layouts
 ctrl + alt - b : chunkc tiling::desktop --layout bsp
@@ -48,5 +49,3 @@ resize < left : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window
 resize < down : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north;
 resize < up : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south;
 resize < right : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west;
-
-ctrl + shift - m     : chunkc tiling::window --grid-layout 1:1:0:0:1:1
