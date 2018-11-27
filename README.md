@@ -143,7 +143,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 30" ~/Library/Preferences/com.apple.finder.plist
 
 # use icon view by default
-defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # don't open 'safe' files by default
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
