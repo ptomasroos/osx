@@ -80,33 +80,36 @@ git config --global user.name "Tomas Roos"
 
 ## config osx
 ```
+# remove guest on login screen
+sudo defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool NO
+
 # trackpad: enable tap to click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool YES
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # automatically illuminate built-in keyboard in low light
-defaults write com.apple.BezelServices kDim -bool true
+defaults write com.apple.BezelServices kDim -bool YES
 # but go dark after 5mins of inactivity
 defaults write com.apple.BezelServices kDimTime -int 300
 
 # show hidden files
-defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool YES
 
 # display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
-defaults write com.apple.finder QuitMenuItem -bool true
-defaults write com.apple.Finder QuitMenuItem -bool YES
+# allow finder to quit
+defaults write com.apple.finder QuitMenuItem -bool YES
   
 # show dotfiles in Finder by default
-defaults write com.apple.finder AppleShowAllFiles TRUE
+defaults write com.apple.finder AppleShowAllFiles YES
 
 # show all file extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write NSGlobalDomain AppleShowAllExtensions -bool YES
 
 # show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowStatusBar -bool YES
 
 # show path bar
 defaults write com.apple.finder ShowPathbar -bool true
