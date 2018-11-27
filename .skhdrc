@@ -2,8 +2,7 @@
 :: resize @   : chunkc border::color 0xFFFAC863
 
 # enter fullscreen mode for the focused container, only works in bsp mode
-ctrl - f : chunkc tiling::window --toggle fullscreen;ctrl + shift - space : chunkc tiling::window --toggle float;
-
+ctrl - f : chunkc tiling::window --toggle fullscreen; chunkc tiling::window --toggle float;
 
 # maximize the floated focused window
 ctrl + shift - m     : chunkc tiling::window --grid-layout 1:1:0:0:1:1
