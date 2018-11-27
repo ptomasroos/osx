@@ -80,9 +80,6 @@ git config --global user.name "Tomas Roos"
 
 ## config osx
 ```
-# remove guest on login screen
-sudo defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool NO
-
 # trackpad: enable tap to click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool YES
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
@@ -102,9 +99,6 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 # allow finder to quit
 defaults write com.apple.finder QuitMenuItem -bool YES
   
-# show dotfiles in Finder by default
-defaults write com.apple.finder AppleShowAllFiles YES
-
 # show all file extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool YES
 
