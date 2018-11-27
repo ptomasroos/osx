@@ -217,7 +217,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # set screenshots dir to avoid polluting the desktop
-mkdir -p "${HOME}/Screenshots""
+mkdir -p "${HOME}/Screenshots"
 defaults write com.apple.screencapture location -string "${HOME}/Screenshots"
 
 # set default format for screenshots
