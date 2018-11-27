@@ -55,6 +55,8 @@ brew services start crisidev/chunkwm/chunkwm
 brew services start koekeishiya/formulae/skhd
 wget https://raw.githubusercontent.com/ptomasroos/osx/master/.skhdrc ~/.skhdrc
 wget https://raw.githubusercontent.com/ptomasroos/osx/master/.chunkwmrc ~/.chunkwmrc
+brew services restart crisidev/chunkwm/chunkwm
+brew services restart koekeishiya/formulae/skhd
 ```
 
 ```
