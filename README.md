@@ -37,8 +37,8 @@ echo ". \"$(brew --prefix nvm)/nvm.sh\"" >> ~/.zshrc
 source ~/.zshrc
 nvm install node
 nvm use node
-echo "export ANDROID_HOME=/usr/local/opt/android-sdk" >> ~/.zshrc
-echo "export ANDROID_NDK=/usr/local/opt/android-ndk" >> ~/.zshrc
+echo "export ANDROID_HOME=/Users/tomas/Library/Android/sdk" >> ~/.zshrc
+echo "export ANDROID_NDK=/Users/tomas/Library/Android/sdk/ndk-bundle" >> ~/.zshrc
 echo "alias xcode=\"open -a Xcode\"" >> ~/.zshrc
 echo "alias studio=\"open -a /Applications/Android\ Studio.app\"" >> ~/.zshrc
 echo "export GOPATH=$HOME/go" >> ~/.zshrc
@@ -68,7 +68,7 @@ brew install applesimutils
 ## brew casks
 ```
 brew cask install homebrew/cask-versions/java8
-brew cask install ngrok vmware-fusion atom docker android-sdk android-ndk visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
+brew cask install ngrok vmware-fusion atom docker visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
 echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'" >> ~/.zshrc
 echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'" >> ~/.zshrc
 source ~/.zshrc
