@@ -42,6 +42,10 @@ echo "export ANDROID_NDK=/Users/tomas/Library/Android/sdk/ndk-bundle" >> ~/.zshr
 echo "alias xcode=\"open -a Xcode\"" >> ~/.zshrc
 echo "alias studio=\"open -a /Applications/Android\ Studio.app\"" >> ~/.zshrc
 echo "export GOPATH=$HOME/go" >> ~/.zshrc
+echo "export GEM_HOME=/Users/tomas/.gem" >> ~/.zshrc
+echo "export PATH=\"$GEM_HOME/bin:$PATH\"" >> ~/.zshrc
+echo "export LC_ALL=en_US.UTF-8" >> ~/.zshrc
+echo "export LANG=en_US.UTF-8" >> ~/.zshrc
 source ~/.zshrc
 mkdir -p $GOPATH
 ```
@@ -61,6 +65,7 @@ brew services restart koekeishiya/formulae/skhd
 ```
 
 ```
+gem install bundler
 brew tap wix/brew
 brew install applesimutils
 ```
