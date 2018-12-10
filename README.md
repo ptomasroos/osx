@@ -52,15 +52,14 @@ mkdir -p $GOPATH
 
 ## i3wm-look-alike on mac
 ```
-brew tap crisidev/homebrew-chunkwm
-brew install --HEAD --with-tmp-logging chunkwm
+brew install --HEAD --with-tmp-logging koekeishiya/formulae/chunkwm
 brew install --HEAD --with-logging koekeishiya/formulae/skhd
-brew services start crisidev/chunkwm/chunkwm
+brew services start koekeishiya/formulae/chunkwm
 brew services start koekeishiya/formulae/skhd
 wget https://raw.githubusercontent.com/ptomasroos/osx/master/.skhdrc ~/.skhdrc
 wget https://raw.githubusercontent.com/ptomasroos/osx/master/.chunkwmrc ~/.chunkwmrc
 chmod +x ~/.chunkwmrc
-brew services restart crisidev/chunkwm/chunkwm
+brew services restart koekeishiya/formulae/chunkwm
 brew services restart koekeishiya/formulae/skhd
 ```
 
@@ -73,6 +72,7 @@ brew install applesimutils
 ## brew casks
 ```
 brew cask install homebrew/cask-versions/java8
+brew cask install microsoft-office
 brew cask install bitbar shimo nordvpn ngrok vmware-fusion atom docker visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
 echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'" >> ~/.zshrc
 echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'" >> ~/.zshrc
