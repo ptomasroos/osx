@@ -287,7 +287,7 @@ npm install -g react-native-cli
 npm install -g detox-cli
 ```
 
-## apm's
+## pip's
 ```
-apm install nuclide
+pip install virtualenv
 ```
