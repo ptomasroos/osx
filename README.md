@@ -8,21 +8,25 @@ sudo softwareupdate -ia --verbose
 
 ## manual from appstore
 ```
-dashlane
+1password
 xcode
+```
+
+## xcode tools
+```
 xcode-select --install
 ```
 
 ## install brew
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ```
 brew install zsh zsh-completion
 chsh -s /bin/zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ## continue with more brew packages
