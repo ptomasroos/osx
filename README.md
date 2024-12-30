@@ -39,7 +39,10 @@ echo 'eval "$(nodenv init - zsh)"' >> ~/.zshrc
 brew install goenv
 echo 'eval "$(goenv init -)"' >> ~/.zshrc
 
-brew install watchman autojump htop wget nmap tig hg bzr git goenv tree xz
+brew install rbenv
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+
+brew install watchman autojump htop wget nmap tig git tree xz 
 
 echo "export ANDROID_HOME=/Users/tomas/Library/Android/sdk" >> ~/.zshrc
 echo "export ANDROID_NDK=/Users/tomas/Library/Android/sdk/ndk-bundle" >> ~/.zshrc
@@ -54,25 +57,17 @@ source ~/.zshrc
 mkdir -p $GOPATH
 ```
 
-## i3wm-look-alike on mac
-```
-brew install --HEAD --with-tmp-logging koekeishiya/formulae/chunkwm
-brew install --HEAD --with-logging koekeishiya/formulae/skhd
-brew services start koekeishiya/formulae/chunkwm
-brew services start koekeishiya/formulae/skhd
-wget https://raw.githubusercontent.com/ptomasroos/osx/master/.skhdrc ~/.skhdrc
-wget https://raw.githubusercontent.com/ptomasroos/osx/master/.chunkwmrc ~/.chunkwmrc
-chmod +x ~/.chunkwmrc
-brew services restart koekeishiya/formulae/chunkwm
-brew services restart koekeishiya/formulae/skhd
-```
-
 ## brew casks
 ```
-brew cask install imageoptim bitbar shimo nordvpn ngrok vmware-fusion atom docker visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
-echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'" >> ~/.zshrc
-echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'" >> ~/.zshrc
-source ~/.zshrc
+brew cask install imageoptim bitbar nordvpn docker visual-studio-code spotify google-chrome vlc slack firefox telegram signal android-studio spectrum discord
+```
+
+## google-cloud-sdk
+```
+brew cask install google-cloud-sdk
+echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"' >> ~/.zshrc
+echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"' >> ~/.zshrc
+
 ```
 
 ## git config
@@ -275,15 +270,4 @@ sudo tmutil disable
 # don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
-```
-
-## npm's
-```
-npm install -g react-native-cli
-npm install -g detox-cli
-```
-
-## pip's
-```
-pip install virtualenv
 ```
