@@ -54,12 +54,12 @@ echo "export LANG=en_US.UTF-8" >> ~/.zshrc
 
 ## brew casks
 ```
-brew cask install imageoptim bitbar nordvpn docker visual-studio-code spotify google-chrome vlc slack firefox telegram signal android-studio spectrum discord
+brew install --cask imageoptim bitbar nordvpn docker visual-studio-code spotify google-chrome vlc slack firefox telegram signal android-studio spectrum discord
 ```
 
 ## google-cloud-sdk
 ```
-brew cask install google-cloud-sdk
+brew install --cask google-cloud-sdk
 echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"' >> ~/.zshrc
 echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"' >> ~/.zshrc
 
