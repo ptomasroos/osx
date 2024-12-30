@@ -8,12 +8,6 @@ This is the installation guide how to install OSX according to my regular setup 
 sudo softwareupdate -ia --verbose
 ```
 
-## manual from appstore
-```
-1password
-xcode
-```
-
 ## xcode tools
 ```
 xcode-select --install
@@ -26,23 +20,27 @@ xcode-select --install
 ```
 
 ```
-brew install zsh zsh-completion
-chsh -s /bin/zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+brew install zsh
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ## continue with more brew packages
 
 ```
-brew install nvm watchman autojump htop wget nmap yarn tig hg bzr git goenv tree
-echo "eval \"$(goenv init -)\"" >> ~/.zshrc
-source ~/.zshrc
-mkdir ~/.nvm
-echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.zshrc
-echo ". \"$(brew --prefix nvm)/nvm.sh\"" >> ~/.zshrc
-source ~/.zshrc
-nvm install node
-nvm use node
+brew install pyenv
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
+
+brew install nodenv
+echo 'eval "$(nodenv init - zsh)"' >> ~/.zshrc
+
+brew install goenv
+echo 'eval "$(goenv init -)"' >> ~/.zshrc
+
+brew install watchman autojump htop wget nmap tig hg bzr git goenv tree xz
+
 echo "export ANDROID_HOME=/Users/tomas/Library/Android/sdk" >> ~/.zshrc
 echo "export ANDROID_NDK=/Users/tomas/Library/Android/sdk/ndk-bundle" >> ~/.zshrc
 echo "alias xcode=\"open -a Xcode\"" >> ~/.zshrc
@@ -69,16 +67,8 @@ brew services restart koekeishiya/formulae/chunkwm
 brew services restart koekeishiya/formulae/skhd
 ```
 
-```
-gem install bundler
-brew tap wix/brew
-brew install applesimutils
-```
-
 ## brew casks
 ```
-brew cask install homebrew/cask-versions/java8
-brew cask install microsoft-office
 brew cask install imageoptim bitbar shimo nordvpn ngrok vmware-fusion atom docker visual-studio-code skype spotify google-chrome vlc slack dropbox firefox telegram focus goofy signal android-studio spectrum discord google-cloud-sdk
 echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'" >> ~/.zshrc
 echo "source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'" >> ~/.zshrc
