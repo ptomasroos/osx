@@ -42,7 +42,7 @@ echo 'eval "$(goenv init -)"' >> ~/.zshrc
 brew install rbenv
 echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 
-brew install watchman autojump htop wget nmap tig git tree xz 
+brew install watchman autojump htop wget nmap tig git tree xz uv
 
 echo "export ANDROID_HOME=/Users/tomas/Library/Android/sdk" >> ~/.zshrc
 echo "export ANDROID_NDK=/Users/tomas/Library/Android/sdk/ndk-bundle" >> ~/.zshrc
