@@ -50,6 +50,17 @@ echo "alias xcode=\"open -a Xcode\"" >> ~/.zshrc
 echo "alias studio=\"open -a /Applications/Android\ Studio.app\"" >> ~/.zshrc
 echo "export LC_ALL=en_US.UTF-8" >> ~/.zshrc
 echo "export LANG=en_US.UTF-8" >> ~/.zshrc
+echo 'eval "$(uv generate-shell-completion zsh)"
+
+_uv_run_mod() {
+    if [[ "$words[2]" == "run" && "$words[CURRENT]" != -* ]]; then
+        _arguments '*:filename:_files'
+    else
+        _uv "$@"
+    fi
+}
+compdef _uv_run_mod uv
+' >> ~/.zshrc
 ```
 
 ## brew casks
