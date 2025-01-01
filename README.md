@@ -127,8 +127,6 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # disable file extension warning
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-
-
 # wipe all (default) app icons from the 
 defaults write com.apple.dock persistent-apps -array
 killall Dock
@@ -142,16 +140,9 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # arrange by kind
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy kind" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy kind" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy kind" ~/Library/Preferences/com.apple.finder.plist
+defaults write com.apple.finder FXArrangeGroupBy -string "kind"
 
-# set grid spacing
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 54" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:gridSpacing 54" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 30" ~/Library/Preferences/com.apple.finder.plist
-
-# use icon view by default
+# use list view by default
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # using the system-native print preview dialog in Chrome
@@ -221,9 +212,6 @@ defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 # requiring password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-# disable local Time Machine backups
-sudo tmutil disable
 
 # don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
