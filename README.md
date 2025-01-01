@@ -77,9 +77,7 @@ brew install --cask xbar chatgpt imageoptim nordvpn docker visual-studio-code sp
 ## google-cloud-sdk
 ```
 brew install --cask google-cloud-sdk
-echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"' >> ~/.zshrc
-echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"' >> ~/.zshrc
-
+echo 'source "/opt/homebrew/share/zsh/site-functions/_google_cloud_sdk"' >> ~/.zshrc
 ```
 
 ## git config
