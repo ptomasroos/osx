@@ -71,7 +71,7 @@ echo "source <(fzf --zsh)" >> ~/.zshrc
 
 ## brew casks
 ```
-brew install --cask imageoptim bitbar nordvpn docker visual-studio-code spotify google-chrome vlc slack firefox telegram signal android-studio spectrum discord
+brew install --cask chatgpt imageoptim bitbar nordvpn docker visual-studio-code spotify google-chrome vlc slack firefox telegram signal android-studio spectrum discord
 ```
 
 ## google-cloud-sdk
@@ -93,15 +93,12 @@ git config --global user.name "Tomas Roos"
 
 ## config osx
 ```
+
 # trackpad: enable tap to click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool YES
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# automatically illuminate built-in keyboard in low light
-defaults write com.apple.BezelServices kDim -bool YES
-# but go dark after 5mins of inactivity
-defaults write com.apple.BezelServices kDimTime -int 300
+# set bluetooth trackpad to tap
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool YES
 
 # show hidden files
 defaults write com.apple.finder AppleShowAllFiles -bool YES
@@ -130,17 +127,16 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # disable file extension warning
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# wipe all (default) app icons from the Dock
+
+
+# wipe all (default) app icons from the 
 defaults write com.apple.dock persistent-apps -array
+killall Dock
 
 # set Dock to auto-hide and remove the auto-hiding delay
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
-
-# enable spring loading for directories, remove the delay
-defaults write NSGlobalDomain com.apple.springing.enabled -bool true
-defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
 # don't create .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -157,35 +153,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # use icon view by default
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-
-# don't open 'safe' files by default
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
-
-# set Safari's page search to 'contains' not 'starts with'
-defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
-
-# safari's homepage to bogus
-defaults write com.apple.Safari HomePage -string "about:blank"
-
-# disabling Safari's thumbnail cache for History and Top Sites"
-defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
-
-# disable the default top sites in new tabs
-defaults write com.apple.Safari ShowSidebarInTopSites -bool false
-
-# remove the top sticky favorites bar
-defaults write com.apple.Safari ShowFavoritesBar -bool false
-
-# enable Develop menu and Web Inspector
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-
-# disable AutoFill in safari
-defaults write com.apple.Safari AutoFillFromAddressBook -bool false
-defaults write com.apple.Safari AutoFillPasswords -bool false
-defaults write com.apple.Safari AutoFillCreditCardData -bool false
-defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
 
 # using the system-native print preview dialog in Chrome
 defaults write com.google.Chrome DisablePrintPreview -bool true
@@ -208,20 +175,11 @@ defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
 # install System data files & security updates
 defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
-# automatically download apps purchased on other Macs
-defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
-
 # turn on app auto-update
 defaults write com.apple.commerce AutoUpdate -bool true
 
 # allow the App Store to reboot machine on macOS updates
 defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
-
-# adding a context menu item for showing the Web Inspector in web views"
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
-# show web inspector in all other web views
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # set screenshots dir to avoid polluting the desktop
 mkdir -p "${HOME}/Screenshots"
@@ -229,9 +187,6 @@ defaults write com.apple.screencapture location -string "${HOME}/Screenshots"
 
 # set default format for screenshots
 defaults write com.apple.screencapture type -string "png"
-
-# enabling subpixel font rendering on non-Apple LCDs
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # copy emails as 'foo@example.com', not 'Foo Bar <foo@example.com'
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
@@ -257,20 +212,11 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # save to disk, rather than iCloud, by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
-# check for software updates daily, not just once per week
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-
-# check for software updates daily, not just once per week
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-
 # disable Photos.app from starting everytime a device is plugged in
-defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+defaults write com.apple.ImageCapture disableHotPlug -bool true
 
 # disable system-wide resume
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
-
-# set bluetooth trackpad to tap
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 
 # requiring password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
