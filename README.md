@@ -71,7 +71,7 @@ echo "source <(fzf --zsh)" >> ~/.zshrc
 
 ## brew casks
 ```
-brew install --cask chatgpt imageoptim bitbar nordvpn docker visual-studio-code spotify google-chrome vlc slack firefox telegram signal android-studio spectrum discord
+brew install --cask xbar chatgpt imageoptim nordvpn docker visual-studio-code spotify google-chrome vlc slack firefox telegram signal android-studio spectrum discord
 ```
 
 ## google-cloud-sdk
