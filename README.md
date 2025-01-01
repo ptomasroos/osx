@@ -65,6 +65,8 @@ compdef _uv_run_mod uv
 echo "HISTFILE=~/.zsh_history" >> ~/.zshrc
 echo "HISTSIZE=999999999" >> ~/.zshrc
 echo "SAVEHIST=$HISTSIZE" >> ~/.zshrc
+
+echo "source <(fzf --zsh)" >> ~/.zshrc
 ```
 
 ## brew casks
