@@ -62,9 +62,11 @@ _uv_run_mod() {
 compdef _uv_run_mod uv
 ' >> ~/.zshrc
 
-echo "HISTFILE=~/.zsh_history" >> ~/.zshrc
+echo "HISTFILE=~/Library/Mobile Documents/com~apple~CloudDocs/zsh_history" >> ~/.zshrc
 echo "HISTSIZE=999999999" >> ~/.zshrc
 echo "SAVEHIST=$HISTSIZE" >> ~/.zshrc
+echo "setopt inc_append_history" >> ~/.zshrc
+echo "setopt share_history" >> ~/.zshrc
 
 echo "source <(fzf --zsh)" >> ~/.zshrc
 ```
